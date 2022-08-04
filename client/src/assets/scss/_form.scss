@@ -1,0 +1,176 @@
+.auth__form {
+  width: 80%;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    border-bottom: 2px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+
+    &.invalid {
+      border-color: rgb(173, 10, 10);
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.438);
+      font-weight: bold;
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__select {
+    border-bottom: 2px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+
+    &::placeholder {
+      color: rgba(90, 90, 90, 0.438);
+      font-weight: bold;
+    }
+
+    &.invalid {
+      border-color: rgb(173, 10, 10);
+    }
+  }
+
+  &__error {
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    color: rgb(231, 54, 54);
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.label__file {
+  position: relative;
+  width: 40%;
+  margin: 20px 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  // min-height: 40px;
+  padding: 10px 0;
+  background-color: rgb(134, 75, 161);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form__file {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  font-size: 0;
+
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 15px;
+
+  & button {
+    &:last-child {
+      text-decoration: underline;
+      color: rgb(0, 4, 255);
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.btn.btn__form {
+  padding: 7px 25px;
+  border-radius: 5px;
+
+  &:disabled {
+    background-color: rgba(167, 158, 158, 0.411);
+  }
+
+  &:disabled:hover {
+    background-color: rgba(167, 158, 158, 0.411);
+  }
+}
+
+.link__signup {
+  font-size: 15px;
+  text-decoration: underline;
+  color: rgb(33, 19, 114);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// register Form
+
+.reg__form {
+  background-color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  min-height: 82vh;
+
+  & h1 {
+    text-align: center;
+  }
+
+  &--inner {
+    width: 50%;
+    margin: 80px auto;
+  }
+}
+
+.input__password {
+  position: relative;
+}
+
+.show--pass {
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  right: 13px;
+  bottom: 29px;
+
+  border: none;
+  outline: none;
+
+  background-color: transparent;
+  background-image: url("../../../public/img/eye.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.form__input.password {
+  width: 100%;
+}
+
+.btn.btn__form.btn__reg {
+  margin: 20px auto;
+  padding: 10px 20px;
+}

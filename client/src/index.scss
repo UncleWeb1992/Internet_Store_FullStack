@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap");
+
+@import "./assets/scss/dashboard";
+@import "./assets/scss/header";
+@import "./assets/scss/navbar";
+@import "./assets/scss/_productsMenu";
+@import "./assets/scss/cart";
+@import "./assets/scss/product";
+@import "./assets/scss/filter";
+@import "./assets/scss/footer";
+@import "./assets/scss/modal";
+@import "./assets/scss/order";
+@import "./assets/scss/form";
+@import "./assets/scss/productsInfo";
+@import "./assets/scss/coments";
+@import "./assets/scss/delivery";
+@import "./assets/scss/carousel";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+}
+
+body {
+  position: relative;
+  background-color: #e8e3e2;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+body.hidden {
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1370px;
+  padding: 0 15px;
+}
+
+.simplebar-track.simplebar-vertical {
+  margin-right: -16px;
+}
+
+.scrollUp {
+  position: fixed;
+  right: 50px;
+  bottom: 40px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../public/img/up.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    border: 2px solid rgb(61, 61, 61);
+  }
+}
+
+.scrollUp.hide {
+  visibility: hidden;
+  opacity: 0;
+}

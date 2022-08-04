@@ -1,0 +1,45 @@
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: $redColor;
+  padding: 5px 0;
+
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.nav_link {
+  font-size: 17px;
+  color: #fff;
+  transition: color 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(145, 124, 212);
+  }
+}
+
+.navbar__search {
+  background-color: #fff;
+  padding: 8px 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  width: 30%;
+  color: #000;
+  font-weight: bold;
+}

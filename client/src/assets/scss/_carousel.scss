@@ -1,0 +1,44 @@
+.slider {
+  margin-bottom: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slick-list {
+  height: 500px;
+}
+
+.slick-arrow.slick-next {
+  width: 70px;
+  height: 70px;
+  right: -90px;
+
+  &::before {
+    border-radius: 100%;
+    color: rgb(241, 133, 133);
+    font-size: 50px;
+  }
+}
+
+.slick-arrow.slick-prev {
+  width: 70px;
+  height: 70px;
+  left: -90px;
+
+  &::before {
+    border-radius: 100%;
+    color: rgb(241, 133, 133);
+    font-size: 50px;
+  }
+}
+
+.slick-dots {
+  margin: 0px 6px;
+  & li {
+    & button {
+      &::before {
+        font-size: 10px;
+      }
+    }
+  }
+}

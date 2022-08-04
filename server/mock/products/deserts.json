@@ -1,0 +1,50 @@
+[
+  {
+    "id": "UrWDRylhY",
+    "name": "Макарун Фисташка",
+    "img": "./img/products/deserts/desert1.jpg",
+    "cost": 99,
+    "description": "Десерты",
+    "Ingredients": ""
+  },
+  {
+    "id": "aSUB0h6NgA",
+    "name": "Макарун Малина",
+    "img": "./img/products/deserts/desert2.jpg",
+    "cost": 99,
+    "description": "Десерты",
+    "Ingredients": ""
+  },
+  {
+    "id": "Yj7CsbV5fj",
+    "name": "Макарун Солёная карамель",
+    "img": "./img/products/deserts/desert3.jpg",
+    "cost": 99,
+    "description": "Десерты",
+    "Ingredients": ""
+  },
+  {
+    "id": "JzAwhnAY0o",
+    "name": "Пирожное Тирамису",
+    "img": "./img/products/deserts/desert4.jpg",
+    "cost": 259,
+    "description": "Десерты",
+    "Ingredients": "Классический итальянский десерт."
+  },
+  {
+    "id": "Hco1WQVHh8",
+    "name": "Пирожное Намелака",
+    "img": "./img/products/deserts/desert5.jpg",
+    "cost": 299,
+    "description": "Десерты",
+    "Ingredients": "Хрустящий шоколадный десерт с нежным кремом Намелака"
+  },
+  {
+    "id": "I6NHEEumpv",
+    "name": "Пирожное Клубничный чизкейк",
+    "img": "./img/products/deserts/desert6.jpg",
+    "cost": 135,
+    "description": "Десерты",
+    "Ingredients": "Ягодно-сливочное сочетание."
+  }
+]
