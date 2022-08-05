@@ -1,0 +1,6 @@
+{
+  "port": "8080",
+  "mongoUri": "mongodb+srv://tahir:F5DXqp2o1ZsAyF0w@cluster0.5kqmooz.mongodb.net/inYan?retryWrites=true&w=majority",
+  "accessSecret": "In yan secret key access",
+  "refreshSecret": "In yan secret key refresh"
+}
