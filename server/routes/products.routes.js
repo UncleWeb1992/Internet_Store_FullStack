@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
 
 router.post("/images", uploadMiddleware.single("data"), async (req, res) => {
   try {
-    const fileUri = `${config.get("url")}/images/${req.file.filename}`;
+    const fileUri = `http://${config.get("url")}/images/${req.file.filename}`;
     res.send(fileUri);
   } catch (error) {
     res.status(500).json({
