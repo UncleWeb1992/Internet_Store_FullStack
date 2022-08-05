@@ -75,8 +75,7 @@ const CreateProductForm = ({ setAddProd }) => {
         dispatch(createProduct({ ...formData, img: image }));
       }
     } catch (error) {
-      const { message } = error.response.data.error;
-      setErrors(message);
+      setErrors(error.message);
     }
   };
 

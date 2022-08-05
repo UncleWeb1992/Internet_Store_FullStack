@@ -87,8 +87,14 @@ export const getProductById = (id) => (state) =>
 
 export const updateProducts = (payload) => async (dispatch) => {
   try {
-    const checngedProduct = await ProductService.updatedProduct(payload);
-    dispatch(productsUpdate(checngedProduct));
+    const updateProduct = await ProductService.updatedProduct(payload);
+    dispatch(
+      productsUpdate({
+        ...updateProduct,
+        cost: Number(updateProduct.cost),
+        count: 1,
+      })
+    );
   } catch (error) {
     dispatch(productsRequestFiled(error.message));
   }
@@ -97,7 +103,9 @@ export const updateProducts = (payload) => async (dispatch) => {
 export const createProduct = (payload) => async (dispatch) => {
   try {
     const newProduct = await ProductService.addProduct(payload);
-    dispatch(productCreate(newProduct));
+    dispatch(
+      productCreate({ ...newProduct, cost: Number(newProduct.cost), count: 1 })
+    );
   } catch (error) {
     dispatch(productsRequestFiled(error.message));
   }

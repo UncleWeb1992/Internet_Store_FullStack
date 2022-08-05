@@ -37,7 +37,6 @@ const App = () => {
 
         <Switch>
           <Route path="/signUp" component={RegisterForm} />
-          {/* <Route path="/dashboard" component={DashBoard} /> */}
           <ProtecdedRoute path="/dashboard" component={DashBoard} />
           <Route path="/roll/productInfo/:id" exact component={ProductInfo} />
           <Route path="/set/productInfo/:id" exact component={ProductInfo} />

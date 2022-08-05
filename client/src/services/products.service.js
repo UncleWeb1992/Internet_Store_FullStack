@@ -23,7 +23,7 @@ const ProductService = {
       const { data } = await httpService.post(productsEndPoint, product);
       return data;
     } catch (error) {
-      const { message } = error.response.data.error;
+      const { message } = error.response.data;
       return message;
     }
   },
@@ -61,8 +61,9 @@ const ProductService = {
       );
       return data;
     } catch (error) {
-      const { message } = error.response.data.error;
-      return message;
+      console.log(error);
+      // const { message } = error.response.data.error;
+      // return message;
     }
   },
 

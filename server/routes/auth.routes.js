@@ -110,7 +110,7 @@ router.post("/token", async (req, res) => {
     const dbToken = await tokenSerice.findToken(refreshToken);
 
     const isTokenIvalid =
-      !data || !dbToken || data._id !== dbToken?.user?.toString();
+      !data || !dbToken || data._id !== dbToken.user.toString();
 
     if (isTokenIvalid) {
       res.status(401).json({
@@ -128,7 +128,5 @@ router.post("/token", async (req, res) => {
     });
   }
 });
-
-// "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmViYmE3NjEzMzJjNmJhMjk4YzgxZTIiLCJpYXQiOjE2NTk2MzE5NTJ9.DGXE_Z8KcTkmDF0xHryGANiPoH2JyKtnfOLGUUkakec"
 
 module.exports = router;

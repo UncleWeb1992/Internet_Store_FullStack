@@ -33,10 +33,10 @@ router.post("/", async (req, res) => {
 
 router.post("/images", uploadMiddleware.single("data"), async (req, res) => {
   try {
-    const filePath = `http://localhost:${config.get("port")}/images/${
+    const fileUri = `http://localhost:${config.get("port")}/images/${
       req.file.filename
     }`;
-    res.send(filePath);
+    res.send(fileUri);
   } catch (error) {
     res.status(500).json({
       message: "На сервере произошла ошибка, попробуйте позже",
