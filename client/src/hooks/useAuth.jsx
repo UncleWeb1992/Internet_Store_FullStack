@@ -48,7 +48,7 @@ export const AuthProvider = ({ children }) => {
       const { message } = error.response.data.error;
       if (message === "EMAIL_NOT_FOUND") {
         const errorObject = {
-          password: "Пользователь не найден",
+          email: "Пользователь не найден",
         };
         throw errorObject;
       }
@@ -83,7 +83,7 @@ export const AuthProvider = ({ children }) => {
         setCurrentUser(data);
       }
     } catch (error) {
-      const { message } = error.response.data.error;
+      const { message } = error;
       return message;
     }
   }

@@ -12,9 +12,9 @@ router.get("/:userId", async (req, res) => {
 
     if (!curentUser) {
       res.status(400).json({ message: `USER_BY_ID_${userId}__NOT_FOUND` });
+    } else {
+      res.send(curentUser);
     }
-
-    res.send(curentUser);
   } catch (error) {
     res.status(500).json({
       message: "На сервере произошла ошибка, попробуйте позже",

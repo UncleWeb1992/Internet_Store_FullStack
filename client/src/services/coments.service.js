@@ -9,7 +9,8 @@ const commentsService = {
       return data;
     } catch (error) {
       const { message } = error.response.data;
-      return message;
+      const obgError = { error: message };
+      throw obgError;
     }
   },
 
@@ -19,7 +20,8 @@ const commentsService = {
       return data;
     } catch (error) {
       const { message } = error.response.data;
-      return message;
+      const obgError = { error: message };
+      throw obgError;
     }
   },
 
@@ -28,7 +30,8 @@ const commentsService = {
       await httpService.delete(commentEndPoind + `/${id}`);
     } catch (error) {
       const { message } = error.response.data;
-      return message;
+      const obgError = { error: message };
+      throw obgError;
     }
   },
 };

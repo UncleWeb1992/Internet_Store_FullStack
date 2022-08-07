@@ -116,12 +116,12 @@ router.post("/token", async (req, res) => {
       res.status(401).json({
         message: "Unauthorized",
       });
+    } else {
+      const tokens = tokenSerice.generate({ _id: data._id });
+      await tokenSerice.save(data._id, tokens.refreshToken);
+
+      res.send({ ...tokens, userId: data._id });
     }
-
-    const tokens = tokenSerice.generate({ _id: data._id });
-    await tokenSerice.save(data._id, tokens.refreshToken);
-
-    res.status(200).send({ ...tokens, userId: data._id });
   } catch (error) {
     res.status(500).json({
       message: "На сервере произошла ошибка, попробуйте позже",

@@ -11,8 +11,9 @@ const userService = {
       const data = await http.get(`/${id}`);
       return data;
     } catch (error) {
-      const { message } = error.response.data.error;
-      return message;
+      const { message } = error.response.data;
+      const obgError = { error: message };
+      throw obgError;
     }
   },
 };

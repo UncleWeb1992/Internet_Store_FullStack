@@ -25,20 +25,28 @@ const commentsSlice = createSlice({
     commentsRemove: (state, action) => {
       state.entities = state.entities.filter((c) => c._id !== action.payload);
     },
+    commentsRequestedFiled: (state, action) => {
+      state.error = action.payload;
+      state.isLoading = true;
+    },
   },
 });
 
 const { reducer: commentsReducer, actions } = commentsSlice;
 
-const { commentsAddcomment, commentsRemove, commentsRecived } = actions;
+const {
+  commentsAddcomment,
+  commentsRemove,
+  commentsRecived,
+  commentsRequestedFiled,
+} = actions;
 
 export const loadComentsList = () => async (dispatch) => {
   try {
     const data = await commentsService.loadComment();
     dispatch(commentsRecived(data));
   } catch (error) {
-    const { message } = error.response.data.error;
-    return message;
+    dispatch(commentsRequestedFiled(error.error));
   }
 };
 

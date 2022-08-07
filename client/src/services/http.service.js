@@ -10,20 +10,16 @@ const authEndPoind = "auth/token";
 
 http.interceptors.request.use(
   async function (config) {
-    try {
-      const expiresDate = localStorageService.getTokenExpiresDate();
-      const refreshToken = localStorageService.getRefreshToken();
-      if (config.method === "get" && config.url !== "/products") {
-        if (refreshToken && expiresDate < Date.now()) {
-          const { data } = await http.post(authEndPoind, {
-            refresh_token: refreshToken,
-          });
+    const expiresDate = localStorageService.getTokenExpiresDate();
+    const refreshToken = localStorageService.getRefreshToken();
+    if (config.method === "get" && config.url !== "/products") {
+      if (refreshToken && expiresDate < Date.now()) {
+        const { data } = await http.post(authEndPoind, {
+          refresh_token: refreshToken,
+        });
 
-          localStorageService.setTokens(data);
-        }
+        localStorageService.setTokens(data);
       }
-    } catch (error) {
-      console.log(error);
     }
 
     const accesToken = localStorageService.getAccessToken();
